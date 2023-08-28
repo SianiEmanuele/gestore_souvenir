@@ -1,0 +1,65 @@
+[{
+  "_id": {
+    "$oid": "64e37b0c8fc4942d42a602c4"
+  },
+  "nome": "Marco",
+  "cognome": "Venuto",
+  "dataDiNascita": {
+    "$numberLong": "975106800000"
+  },
+  "username": "marco_venuto",
+  "password": "xerath",
+  "idCollezione": "64e468349f452d56c5b4c2ee"
+},
+{
+  "_id": {
+    "$oid": "64e388e9d427901bec723720"
+  },
+  "nome": "Emanuele Giuseppe",
+  "cognome": "Siani",
+  "dataDiNascita": {
+    "$numberLong": "997135200000"
+  },
+  "username": "ema_siani",
+  "password": "my_pass",
+  "idCollezione": "64e3c543ea474d2928e9a7a9"
+},
+{
+  "_id": {
+    "$oid": "64e47e63452c790cc647f106"
+  },
+  "nome": "Laura",
+  "cognome": "Scigliano",
+  "password": "pass",
+  "username": "lalli",
+  "dataDiNascita": {
+    "$numberLong": "1008630000000"
+  },
+  "idCollezione": "64e47e63452c790cc647f103"
+},
+{
+  "_id": {
+    "$oid": "64e8735e20d87319e58315b6"
+  },
+  "nome": "Guglielmo",
+  "cognome": "Pandolfino",
+  "password": "gugli_pass",
+  "username": "gugli_p",
+  "dataDiNascita": {
+    "$numberLong": "808783200000"
+  },
+  "idCollezione": "64e8735e20d87319e58315b3"
+},
+{
+  "_id": {
+    "$oid": "64e8c70f6331f13546b2e2ad"
+  },
+  "nome": "Maria Chiara",
+  "cognome": "Siani",
+  "password": "passMCS",
+  "username": "maria_chiara",
+  "dataDiNascita": {
+    "$numberLong": "796687200000"
+  },
+  "idCollezione": "64e8c70f6331f13546b2e2aa"
+}]

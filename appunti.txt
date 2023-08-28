@@ -1,0 +1,2 @@
+1. Eccezione bicchiere IllegalArgument:
+    Abbiamo messo che se si mette un tipo non valido mettiamo undefined e parte l'eccezione.
