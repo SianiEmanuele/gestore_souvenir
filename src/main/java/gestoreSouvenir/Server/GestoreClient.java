@@ -95,7 +95,6 @@ public class GestoreClient implements Runnable {
             out.println("Credenziali errate, riprova");
             out.println();
             out.println();
-            //out.println(CLOSE);
             return false;
         }
     }
@@ -263,12 +262,14 @@ public class GestoreClient implements Runnable {
                                     }
                                     break;
 
-                                //Torno al menu principale
+                                //Torno al menu collezione
                                 case 4:
-                                    principale = true;
+                                    esci=true;
                                     break;
                                 default:
-                                    //out.println("La risposta inserita non e' valida, riprovare");
+                                    out.println("La risposta inserita non e' valida, riprovare");
+                                    esci=true;
+                                    break;
                             }
                         }
                         break;
