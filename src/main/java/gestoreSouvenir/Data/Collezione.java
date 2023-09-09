@@ -15,7 +15,6 @@ public class Collezione {
     public Collezione(ArrayList<Souvenir> lista) {
         this.id = new ObjectId();
         this.listaSouvenir = lista;
-        this.id = new ObjectId();
         if(!lista.isEmpty())
             this.numItem = listaSouvenir.size();
         else
