@@ -286,19 +286,4 @@ public class GestoreDB {
             return false;
         }
     }
-
-
-    //metodo che salva la collezione appena creata da un utente, in disuso
-    public boolean saveCollezione(Utente user) throws JsonProcessingException {
-        Collezione coll = user.getCollection();
-        ObjectMapper mapper = new ObjectMapper();
-        SimpleModule moduleCollezione = new SimpleModule("CustomCollezioneSerializer", new Version(1, 0, 0, null, null, null));
-        moduleCollezione.addSerializer(Collezione.class, new CustomCollezioneSerializer());
-        mapper.registerModule(moduleCollezione);
-        String jsonString = mapper.writeValueAsString(coll); //trasforma la collezione in JSON
-        Document docAdded = Document.parse(jsonString);
-        tabellaCollezioni.insertOne(docAdded); //inserisce la collezione nel DB
-        return true;
-    }
-
 }
