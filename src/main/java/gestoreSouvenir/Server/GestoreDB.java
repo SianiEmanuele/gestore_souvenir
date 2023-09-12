@@ -48,7 +48,7 @@ public class GestoreDB {
         listaSouvenir.addAll(getListaBicchieri());
     }
 
-    //scarica la lista degli utenti dalla tabella utenti, ritorna la lista degli utenti (manca ancora l'id)
+    //scarica la lista degli utenti dalla tabella utenti, ritorna la lista degli utenti
     public ArrayList<Utente> getListaUtenti(){
         ArrayList<Utente> listaUtenti = new ArrayList<Utente>();
         Document query = new Document();
@@ -139,7 +139,7 @@ public class GestoreDB {
                 return false;
         }
         listaUtenti.add(newUser);
-        ObjectMapper mapper = new ObjectMapper(); //classe per trasformare una classe in un JSON
+        ObjectMapper mapper = new ObjectMapper(); //classe per trasformare un oggetto in un JSON
 
         //serializzatore Custom per salvare i campi nella maniera desiderata
         SimpleModule module = new SimpleModule("CustomUtenteSerializer", new Version(1, 0, 0, null, null, null));
@@ -251,8 +251,7 @@ public class GestoreDB {
                 moduleCartolina.addSerializer(Cartolina.class, new CustomCartolinaSerializer());
                 mapper.registerModule(moduleCartolina);
                 String jsonString = mapper.writeValueAsString(cartolina); //trasforma la cartolina in JSON
-                Document docAdded = Document.parse(jsonString);
-                tabellaCartoline.deleteOne(docAdded); //rimuove la cartolina dal DB
+                tabellaCartoline.deleteOne(Document.parse(jsonString)); //rimuove la cartolina dal DB
             }
             else if (souvenir instanceof Calamita){
                 SimpleModule moduleCalamita= new SimpleModule("CustomCalamitaSerializer", new Version(1, 0, 0, null, null, null));
