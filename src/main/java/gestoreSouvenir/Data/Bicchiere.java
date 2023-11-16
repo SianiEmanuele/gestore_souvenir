@@ -54,7 +54,7 @@ public class Bicchiere extends Souvenir{
     @Override
     public String toString() {
         String info = "Tipo: Bicchiere";
-        if(this.tipo != TipoBicchiere.undefined)
+        if(this.tipo != TipoBicchiere.undefined) //controlla che tipo sia undefined, in tal caso il print deve essere diverso
             info += " da " + this.tipo;
         info += "." + super.toString();
         return info;
